@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <style>
+        @media (min-width: 768px) {
+            .new-input {
+                width: 60%;
+            }
+
+        }
+    </style>
+
+    <script>
+        <!--        use yiyan-->
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                const hitokoto = document.querySelector('#hitokoto_text')
+                // hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                hitokoto.innerText = data.hitokoto
+            })
+            .catch(console.error)
+        // end yiyan
+
+
+        // 如果验证不通过禁止提交表单
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // 获取表单验证样式
+                var forms = document.getElementsByClassName('needs-validation');
+                // 循环并禁止提交
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <!--        navbar-expand-lg当屏幕尺寸大于lg(992px)时显示-->
+            <a class="navbar-brand" href="../index.html">后尘HouChen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+                <!--        <span class="navbar-toggler-icon"></span> 创建汉堡包图标-->
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="./client.html" class="nav-link">前端</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link">后端</div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link">数据库</div>
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--<section class="p-5 bg-warning h-auto text-light ">-->
+<!--<div class="col-8  offset-4">-->
+<!--        <form class="px-4 py-3">-->
+<!--            <div class="mb-3">-->
+<!--                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>-->
+<!--                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>-->
+<!--                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <div class="form-check">-->
+<!--                    <input type="checkbox" class="form-check-input" id="dropdownCheck">-->
+<!--                    <label class="form-check-label" for="dropdownCheck">-->
+<!--                        Remember me-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <button type="submit" class="btn btn-primary">Sign in</button>-->
+<!--        </form>-->
+<!--        <div class="dropdown-divider"></div>-->
+<!--    <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">-->
+<!--       遇到了问题？-->
+<!--    </a>-->
+
+<!--    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">-->
+<!--        <div class="offcanvas-header">-->
+<!--            <h5 class="offcanvas-title" id="offcanvasExampleLabel">侧边栏</h5>-->
+<!--            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--        </div>-->
+<!--        <div class="offcanvas-body">-->
+<!--            <div>-->
+<!--                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.-->
+<!--            </div>-->
+<!--            <div class="dropdown mt-3">-->
+<!--                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">-->
+<!--                    Dropdown button-->
+<!--                </button>-->
+<!--                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--                    <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</div>-->
+
+<!--</section>-->
+<!---->
+    <section class="p-5 bg-secondary">
+        <div class=" ">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto col-lg-4">
+                    <img class="img-fluid rounded" src="../img/可莉&七七&迪奥娜.png" alt="plus" />
+                    <!--img-fluid控制图片不超出当前div-->
+                </div>
+                <div class="col-md p-3 text-light">
+                    <div class="col-auto  ">
+                        <form class=" ">
+
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">凡人啊，说出你的疑问吧</label>
+                                <textarea id="exampleDropdownFormEmail1" class="form-control"  placeholder="wenti " ></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <textarea id="exampleDropdownFormPassword1" class="form-control" style="height: 150px;"  placeholder="wenti " ></textarea>
+                            </div>
+
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember" required>
+                                    <p>请阅读并同意 <a href="#">协议</a></p>
+                                    <div class="valid-feedback">验证成功！</div>
+                                    <div class="invalid-feedback">同意协议才能提交。</div>
+                                </label>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-light">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="text-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            遇到了问题？
+                        </a>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">侧边栏</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="p-5 bg-dark text-white text-center ">
+        <div class="container">
+            <p class="lead">&commat;HouChen</p>
+            <div id="hitokoto_text" class="nav-link">正在加载，客官不要太着急~</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
