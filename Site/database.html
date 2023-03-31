@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+      <html lang="zh-CN">
+
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>模板</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+
+  <script>
+    <!--        use yiyan-->
+    fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+              const hitokoto = document.querySelector('#hitokoto_text')
+              // hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+              hitokoto.innerText = data.hitokoto
+            })
+            .catch(console.error)
+    // end yiyan
+  </script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+  <div class="container">
+    <!--        navbar-expand-lg当屏幕尺寸大于lg(992px)时显示-->
+    <a class="navbar-brand" href="../index.html">后尘HouChen</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+      <!--        <span class="navbar-toggler-icon"></span> 创建汉堡包图标-->
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <div id="hitokoto_text" class="nav-link">正在加载，客官不要太着急~</div>
+        </li>
+        <li class="nav-item">
+          <a href="./client.html" class="nav-link">前端</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link">后端</div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link">数据库</div>
+        </li>
+        <li class="nav-item">
+          <a href="./Q&A.html" class="nav-link">Q&A</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<footer class="p-5 bg-dark text-white text-center">
+  <div class="container">
+    <p class="lead" >&commat;HouChen</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
