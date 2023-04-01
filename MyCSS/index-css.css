@@ -5,6 +5,7 @@
 
 }
 
+/*设置卡片高度一致*/
 .card-group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 卡片宽度自适应 */
@@ -16,3 +17,4 @@
     background-color: #fff; /* 卡片颜色 */
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
 }
+/*设置卡片高度一致end*/

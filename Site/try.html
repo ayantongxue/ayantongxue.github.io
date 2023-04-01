@@ -2,76 +2,69 @@
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>模板</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>模板</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" rel="stylesheet">
 
 
-  <script>
-    <!--        use yiyan-->
-    fetch('https://v1.hitokoto.cn')
+    <script>
+        <!--        use yiyan-->
+        fetch('https://v1.hitokoto.cn')
             .then(response => response.json())
             .then(data => {
-              const hitokoto = document.querySelector('#hitokoto_text')
-              // hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
-              hitokoto.innerText = data.hitokoto
+                const hitokoto = document.querySelector('#hitokoto_text')
+                // hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                hitokoto.innerText = data.hitokoto
             })
             .catch(console.error)
-    // end yiyan
-  </script>
+        // end yiyan
+    </script>
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-  <div class="container">
-    <!--        navbar-expand-lg当屏幕尺寸大于lg(992px)时显示-->
-    <a class="navbar-brand" href="../index.html">后尘HouChen</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-      <!--        <span class="navbar-toggler-icon"></span> 创建汉堡包图标-->
-    </button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <div id="hitokoto_text" class="nav-link">正在加载，客官不要太着急~</div>
-        </li>
-        <li class="nav-item">
-          <a href="./client.html" class="nav-link">前端</a>
-        </li>
-        <li class="nav-item">
-          <div class="nav-link">后端</div>
-        </li>
-        <li class="nav-item">
-          <div class="nav-link">数据库</div>
-        </li>
-        <li class="nav-item">
-          <a href="./Q&A.html" class="nav-link">Q&A</a>
-        </li>
-      </ul>
+    <div class="container">
+        <!--        navbar-expand-lg当屏幕尺寸大于lg(992px)时显示-->
+        <a class="navbar-brand" href="../index.html">后尘HouChen</a>
+        <button class="navbar-toggler" data-bs-target="#nav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+            <!--        <span class="navbar-toggler-icon"></span> 创建汉堡包图标-->
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <div class="nav-link" id="hitokoto_text">正在加载，客官不要太着急~</div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./client.html">前端</a>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">后端</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">数据库</div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Q&A.html">Q&A</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
 
-
-
-
-
-
-
-
 <footer class="p-5 bg-dark text-white text-center">
-  <div class="container">
-    <p class="lead" >&commat;HouChen</p>
-  </div>
+    <div class="container">
+        <p class="lead">&commat;HouChen</p>
+    </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
