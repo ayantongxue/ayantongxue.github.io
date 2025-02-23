@@ -44,7 +44,7 @@ layout: section
 - 让电脑说你的名字
 - 让电脑算3+5
 
-<img class="absolute right-17 top-30" src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" />
+<img class="absolute right-17 top-30" src="./public/hmbb-2.webp" />
 
 ---
 layout: statement
