@@ -2,6 +2,13 @@
 theme: apple-basic
 layout: intro-image
 image: /bgc.png
+title: "Python"
+titleTemplate: '%s - Song Yanfeng'
+presenter: true
+author: Song Yanfeng
+htmlAttrs:
+  lang: zh-CN
+favicon: /logo.png
 ---
 
 
@@ -44,7 +51,7 @@ layout: section
 - 让电脑说你的名字
 - 让电脑算3+5
 
-<img class="absolute right-17 top-30" src="./hmbb-2.webp" />
+<img class="absolute right-17 top-30" src="./public/hmbb-2.webp" />
 
 ---
 layout: statement
