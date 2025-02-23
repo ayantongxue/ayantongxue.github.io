@@ -2,7 +2,7 @@
 theme: apple-basic
 layout: intro-image
 transition: fade | go-backward
-image: '/public/bgc.png'
+image: /public/bgc.png
 ---
 
 
